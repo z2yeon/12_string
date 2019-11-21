@@ -5,9 +5,22 @@
 
 int main(int argc, char *argv[]) {
 	
-	char str[30]="happy C programming";
 	
-	printf("string \"%s\" length:%i",str,strlen(str));
+	int i;
+	char input[100];
+	FILE *fp;
+	
+	fp=fopen("C:\text.txt","w");
+	
+	for(i=0;i<3;i++)
+	{
+		//printf("input a word: ");
+		//scanf("%s",input);
+		fscanf(fp,"%s\n",input);
+		printf("%s\n",input);
+	}
+	
+	fclose(fp);
 	
 	return 0;
 }
